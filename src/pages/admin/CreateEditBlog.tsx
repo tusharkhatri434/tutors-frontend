@@ -175,7 +175,7 @@ export const CreateEditBlog: React.FC = () => {
           key: 'Enter',
           empty: true,
           format: ['code-block'],
-          handler: function (range: any, context: any) {
+          handler: function (range: any) {
             if (quillRef.current) {
               const quill = quillRef.current.getEditor();
               // Remove the code-block format from the current empty line
