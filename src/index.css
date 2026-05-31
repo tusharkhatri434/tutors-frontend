@@ -14,3 +14,438 @@
     @apply bg-slate-900 text-slate-50;
   }
 }
+
+/* ==========================================================================
+   PREMIUM NOTION/MEDIUM EDITOR STYLING OVERRIDES FOR QUILL
+   ========================================================================== */
+
+/* Distraction-free borderless Quill container */
+.notion-editor-container .ql-container.ql-snow {
+  border: none !important;
+  font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif !important;
+}
+
+.notion-editor-container .ql-editor {
+  min-height: 550px;
+  max-height: 800px;
+  overflow-y: auto;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  letter-spacing: -0.011em;
+  padding: 2.5rem !important;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+/* Scrollbar customizations for modern feel */
+.notion-editor-container .ql-editor::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.notion-editor-container .ql-editor::-webkit-scrollbar-track {
+  background: transparent;
+}
+.notion-editor-container .ql-editor::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark .notion-editor-container .ql-editor::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Typography polish for Notion/Medium visual identity */
+.notion-editor-container .ql-editor h1,
+.notion-editor-container .ql-editor h2,
+.notion-editor-container .ql-editor h3 {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  color: #0f172a;
+  font-weight: 800;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+.dark .notion-editor-container .ql-editor h1,
+.dark .notion-editor-container .ql-editor h2,
+.dark .notion-editor-container .ql-editor h3 {
+  color: #f8fafc;
+}
+
+.notion-editor-container .ql-editor h1 { font-size: 2.2rem !important; font-weight: 800 !important; }
+.notion-editor-container .ql-editor h2 { font-size: 1.65rem !important; font-weight: 700 !important; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.35rem; }
+.dark .notion-editor-container .ql-editor h2 { border-bottom-color: #1e293b; }
+.notion-editor-container .ql-editor h3 { font-size: 1.35rem !important; font-weight: 600 !important; }
+
+.notion-editor-container .ql-editor p {
+  margin-bottom:0.01rem;
+  color: #334155;
+}
+.dark .notion-editor-container .ql-editor p {
+  color: #cbd5e1;
+}
+
+/* Custom Blockquote */
+.notion-editor-container .ql-editor blockquote {
+  border-left: 4px solid #3b82f6 !important;
+  background-color: #f8fafc;
+  padding: 1rem 1.5rem !important;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #475569;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+}
+.dark .notion-editor-container .ql-editor blockquote {
+  background-color: rgba(30, 41, 59, 0.5);
+  color: #94a3b8;
+}
+
+/* Code Block & Inline Code */
+.notion-editor-container .ql-editor code,
+.notion-editor-container .ql-editor pre {
+  font-family: 'Fira Code', 'Courier New', monospace !important;
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-radius: 6px;
+}
+.dark .notion-editor-container .ql-editor code,
+.dark .notion-editor-container .ql-editor pre {
+  background-color: #0f172a !important;
+  color: #38bdf8 !important;
+}
+
+.notion-editor-container .ql-editor pre {
+  padding: 1.25rem !important;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.dark .notion-editor-container .ql-editor pre {
+  border-color: #1e293b;
+}
+
+/* Inline Images styling */
+.notion-editor-container .ql-editor img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  display: block;
+  max-width: 100%;
+  border: 4px solid #f8fafc;
+  transition: all 0.3s ease;
+}
+.dark .notion-editor-container .ql-editor img {
+  border-color: #1e293b;
+}
+.notion-editor-container .ql-editor img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Native Premium Tables */
+.notion-editor-container .ql-editor table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+.dark .notion-editor-container .ql-editor table {
+  border-color: #1e293b;
+}
+
+.notion-editor-container .ql-editor td,
+.notion-editor-container .ql-editor th {
+  border: 1px solid #e2e8f0 !important;
+  padding: 10px 14px !important;
+  font-size: 0.95rem;
+}
+.dark .notion-editor-container .ql-editor td,
+.dark .notion-editor-container .ql-editor th {
+  border-color: #1e293b !important;
+}
+
+.notion-editor-container .ql-editor tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+.dark .notion-editor-container .ql-editor tr:nth-child(even) {
+  background-color: rgba(30, 41, 59, 0.25);
+}
+
+.notion-editor-container .ql-editor th {
+  background-color: #f1f5f9;
+  font-weight: 700;
+  text-align: left;
+}
+.dark .notion-editor-container .ql-editor th {
+  background-color: #1e293b;
+}
+
+/* Lists styling */
+.notion-editor-container .ql-editor ol,
+.notion-editor-container .ql-editor ul {
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.25rem;
+}
+
+/* Placeholder Style */
+.notion-editor-container .ql-container.ql-snow .ql-editor.ql-blank::before {
+  color: #94a3b8 !important;
+  font-style: normal !important;
+  left: 2.5rem !important;
+  right: 2.5rem !important;
+  opacity: 0.7;
+}
+.dark .notion-editor-container .ql-container.ql-snow .ql-editor.ql-blank::before {
+  color: #475569 !important;
+}
+
+/* ==========================================================================
+   STICKY FLOATING CUSTOM TOOLBAR MODERN OVERRIDES
+   ========================================================================== */
+#custom-editor-toolbar {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+#custom-editor-toolbar .ql-formats {
+  display: inline-flex !important;
+  align-items: center !important;
+  border-right: 1px solid #e2e8f0 !important;
+  padding-right: 8px !important;
+  margin-right: 8px !important;
+}
+
+#custom-editor-toolbar .ql-formats:last-child {
+  border-right: none !important;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+.notion-theme-light #custom-editor-toolbar .ql-formats {
+  border-right-color: #e2e8f0 !important;
+}
+
+
+.ql-snow.ql-toolbar button, 
+.ql-snow .ql-toolbar button {
+  border-radius: 6px !important;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 3px !important;
+  margin: 2px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ql-snow.ql-toolbar button:hover, 
+.ql-snow .ql-toolbar button:hover,
+.ql-snow.ql-toolbar button.ql-active,
+.ql-snow .ql-toolbar button.ql-active {
+  background-color: #f1f5f9 !important;
+  color: #3b82f6 !important;
+}
+.dark .ql-snow.ql-toolbar button:hover, 
+.dark .ql-snow .ql-toolbar button:hover,
+.dark .ql-snow.ql-toolbar button.ql-active,
+.dark .ql-snow .ql-toolbar button.ql-active {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+.ql-snow.ql-toolbar select,
+.ql-snow .ql-toolbar select {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  border-radius: 6px !important;
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.ql-snow.ql-toolbar select:hover,
+.ql-snow .ql-toolbar select:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+.dark .ql-snow.ql-toolbar select:hover,
+.dark .ql-snow .ql-toolbar select:hover {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* SVG Colors in Dark Mode */
+.dark .ql-snow.ql-toolbar svg path,
+.dark .ql-snow .ql-toolbar svg path,
+.dark .ql-snow.ql-toolbar svg rect,
+.dark .ql-snow .ql-toolbar svg rect,
+.dark .ql-snow.ql-toolbar svg line,
+.dark .ql-snow .ql-toolbar svg line,
+.dark .ql-snow.ql-toolbar svg polyline,
+.dark .ql-snow .ql-toolbar svg polyline,
+.dark .ql-snow.ql-toolbar svg polygon,
+.dark .ql-snow .ql-toolbar svg polygon {
+  stroke: #cbd5e1 !important;
+}
+
+.dark .ql-snow.ql-toolbar button:hover svg path,
+.dark .ql-snow .ql-toolbar button:hover svg path,
+.dark .ql-snow.ql-toolbar button.ql-active svg path,
+.dark .ql-snow .ql-toolbar button.ql-active svg path {
+  stroke: #38bdf8 !important;
+}
+
+.dark .ql-snow.ql-toolbar .ql-picker-label {
+  color: #cbd5e1 !important;
+}
+
+.dark .ql-snow.ql-toolbar .ql-picker-options {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .ql-snow.ql-toolbar .ql-picker-item {
+  color: #94a3b8 !important;
+}
+.dark .ql-snow.ql-toolbar .ql-picker-item:hover {
+  color: #38bdf8 !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================================
+   FORCE LIGHT THEME ON THE BLOG EDITOR CONTAINER REGARDLESS OF GLOBAL DARK MODE
+   ========================================================================== */
+.notion-theme-light {
+  background-color: #f8fafc !important; /* bg-slate-50 */
+  color: #0f172a !important; /* text-slate-900 */
+}
+
+/* Force headings and paragraph colors inside the page */
+.notion-theme-light h1,
+.notion-theme-light h2,
+.notion-theme-light h3,
+.notion-theme-light label,
+.notion-theme-light p,
+.notion-theme-light span {
+  color: #0f172a !important;
+}
+
+.notion-theme-light .text-slate-500,
+.notion-theme-light .text-slate-400 {
+  color: #64748b !important; /* text-slate-500 */
+}
+
+/* Force cards and inputs to stay light */
+.notion-theme-light .bg-white,
+.notion-theme-light .bg-slate-900,
+.notion-theme-light input,
+.notion-theme-light textarea,
+.notion-theme-light .bg-slate-50,
+.notion-theme-light .bg-slate-900\/50 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+.notion-theme-light .border,
+.notion-theme-light .border-2,
+.notion-theme-light .border-dashed {
+  border-color: #e2e8f0 !important;
+}
+
+/* Force sticky toolbar, editor workspace, and floating stats dashboard to stay white */
+.notion-theme-light #custom-editor-toolbar,
+.notion-theme-light .sticky,
+.notion-theme-light .notion-editor-container,
+.notion-theme-light .fixed {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Force Quill editor content elements to stay light */
+.notion-theme-light .ql-editor {
+  background-color: #ffffff !important;
+  color: #334155 !important;
+}
+
+.notion-theme-light .ql-editor h1,
+.notion-theme-light .ql-editor h2,
+.notion-theme-light .ql-editor h3 {
+  color: #0f172a !important;
+}
+
+.notion-theme-light .ql-editor p {
+  color: #334155 !important;
+}
+
+.notion-theme-light .ql-editor blockquote {
+  background-color: #f8fafc !important;
+  color: #475569 !important;
+  border-left-color: #3b82f6 !important;
+}
+
+.notion-theme-light .ql-editor code,
+.notion-theme-light .ql-editor pre {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.notion-theme-light .ql-editor table,
+.notion-theme-light .ql-editor td,
+.notion-theme-light .ql-editor th {
+  border-color: #e2e8f0 !important;
+}
+
+.notion-theme-light .ql-editor tr:nth-child(even) {
+  background-color: #f8fafc !important;
+}
+
+.notion-theme-light .ql-editor th {
+  background-color: #f1f5f9 !important;
+}
+
+/* Force Quill Toolbar button and SVG styling */
+.notion-theme-light .ql-snow.ql-toolbar svg path,
+.notion-theme-light .ql-snow.ql-toolbar svg rect,
+.notion-theme-light .ql-snow.ql-toolbar svg line,
+.notion-theme-light .ql-snow.ql-toolbar svg polyline,
+.notion-theme-light .ql-snow.ql-toolbar svg polygon {
+  stroke: #475569 !important;
+}
+
+.notion-theme-light .ql-snow.ql-toolbar button:hover svg path,
+.notion-theme-light .ql-snow.ql-toolbar button.ql-active svg path {
+  stroke: #3b82f6 !important;
+}
+
+.notion-theme-light .ql-snow.ql-toolbar .ql-picker-label {
+  color: #475569 !important;
+}
+
+.notion-theme-light .ql-snow.ql-toolbar .ql-picker-options {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+.notion-theme-light .ql-snow.ql-toolbar .ql-picker-item {
+  color: #475569 !important;
+}
+.notion-theme-light .ql-snow.ql-toolbar .ql-picker-item:hover {
+  color: #3b82f6 !important;
+}
+
